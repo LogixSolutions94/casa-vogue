@@ -1,12 +1,14 @@
 # CASA VOGUE — Site vitrine
 
-Site vitrine d'une **maison de rideaux & tissus** : tissus au mètre, rideaux &
-voilages, tringles & accessoires, mobilier et coussins. Conseil, confection sur-mesure
-et pose.
+Site vitrine de **Casa Vogue**, maison familiale de tissus, ameublement & décoration
+d'intérieur tenue par M. Brahimi, de père en fils — Kouba, Alger : tissus au mètre,
+rideaux & voilages, tringles & accessoires, mobilier et coussins. Conseil, confection
+sur-mesure et pose.
 
-> 100 % statique (HTML / CSS / JS), sans dépendance ni build. Logo et réalisations
-> (photos + vidéos) sont ceux fournis par la maison ; le catalogue démo utilise des
-> **swatches SVG/CSS** (nuancier d'atelier) là où aucune photo produit n'existe encore.
+> 100 % statique (HTML / CSS / JS), sans dépendance ni build. Logo, réalisations
+> (photos + vidéos), adresse, WhatsApp et réseaux sociaux sont ceux de la maison ;
+> le catalogue démo utilise des **swatches SVG/CSS** (nuancier d'atelier) là où
+> aucune photo produit n'existe encore.
 
 ## ✨ Aperçu
 
@@ -71,13 +73,23 @@ casa-vogue/
 Le dépôt est prêt pour GitHub Pages (branche `main`, dossier racine). Une fois activé,
 le site est servi tel quel — aucune étape de build.
 
-## ⚠️ Notes
+## ⚠️ Notes — ce qui reste à confirmer avant diffusion large
 
-- Coordonnées et adresse du showroom sont **fictives** — à remplacer par les vôtres.
-  Le logo, les photos et vidéos de réalisations sont en revanche les vôtres.
-- Le catalogue (`assets/js/products.js`) reste une démo de mise en page : remplacez
-  progressivement les swatches par vos vraies photos produit au fil de vos prises de vue.
+- **Prix & devise du catalogue** (`assets/js/products.js`) : toujours affichés en **€** à
+  titre d'exemple de mise en page. À corriger en dinars algériens (DA) avec vos vrais
+  tarifs avant de partager le site largement.
+- **Avis clients** (section « Ils nous font confiance », `index.html`) : ce sont encore
+  des exemples fictifs (noms, quartiers d'Alger inventés). À remplacer par de vrais avis
+  dès que possible pour rester honnête envers vos clients.
+- **Chiffres marketing** (« 240 références », « livraison offerte dès 150 € »…) : à
+  ajuster ou retirer selon vos vraies offres.
+- **Horaires** (Mar–Sam 10h–19h) : placeholder à confirmer.
+- Le catalogue reste une démo de mise en page : remplacez progressivement les swatches
+  par vos vraies photos produit au fil de vos prises de vue.
 - Les formulaires sont en démonstration (validation front uniquement). Branchez-les à
   votre service d'envoi (Formspree, Netlify Forms, votre API…) le moment venu.
 - Les vidéos ne sont pas compressées (jusqu'à ~6 Mo) : envisagez de les optimiser
   (H.264, ~720p, bitrate réduit) si le temps de chargement devient sensible.
+
+Le **logo, l'adresse (Kouba, Alger), le numéro WhatsApp et les réseaux sociaux**
+(Instagram, TikTok, Facebook) sont en revanche les vrais.
