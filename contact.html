@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & rendez-vous — CASA VOGUE</title>
+  <meta name="description" content="Prenez rendez-vous avec Casa Vogue : conseil déco, prise de mesures et devis sur-mesure. Showroom à Paris, du mardi au samedi." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <span>Livraison offerte dès 150 € · <b>Échantillons gratuits</b> sur simple demande · Showroom ouvert du mardi au samedi</span>
+  </div>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand" aria-label="Casa Vogue, accueil">
+        <span class="mark">Casa</span><span class="mark">Vogue</span><span class="sub">Paris</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="collections.html">Collections</a>
+        <a href="index.html#savoir-faire">Savoir-faire</a>
+        <a href="index.html#services">Services</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Prendre rendez-vous</a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" aria-label="Menu mobile">
+    <a href="index.html">Accueil</a>
+    <a href="collections.html">Collections</a>
+    <a href="index.html#savoir-faire">Savoir-faire</a>
+    <a href="index.html#services">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Prendre rendez-vous</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="breadcrumb" data-reveal><a href="index.html">Accueil</a> · Contact</p>
+        <h1 data-reveal data-delay="1">Parlons de votre projet</h1>
+        <p data-reveal data-delay="2">Conseil déco, prise de mesures à domicile ou simple devis :
+          écrivez-nous, nous vous répondons sous 24&nbsp;heures.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap contact-grid">
+        <!-- Infos -->
+        <div class="info-card">
+          <div class="info-item" data-reveal>
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><b>Showroom</b><p>24 rue des Tisserands<br>75003 Paris — Le Marais</p></div>
+          </div>
+          <div class="info-item" data-reveal data-delay="1">
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span>
+            <div><b>Téléphone</b><p><a href="tel:+33100000000">01 00 00 00 00</a><br>Du mardi au samedi, 10h – 19h</p></div>
+          </div>
+          <div class="info-item" data-reveal data-delay="2">
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div><b>E-mail</b><p><a href="mailto:bonjour@casavogue.fr">bonjour@casavogue.fr</a></p></div>
+          </div>
+          <div class="info-item" data-reveal data-delay="3">
+            <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div><b>Horaires</b><p>Mardi – Samedi · 10h – 19h<br>Dimanche &amp; lundi : sur rendez-vous</p></div>
+          </div>
+
+          <div class="map-strip" data-reveal aria-hidden="true">
+            <div class="swatch p-olive w-carreaux"></div>
+            <div class="pin"><div><b>Casa Vogue</b>Le Marais · Paris 3e</div></div>
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <form class="form" data-contact novalidate data-reveal data-delay="1">
+          <div class="field two">
+            <div>
+              <label for="prenom">Prénom *</label>
+              <input id="prenom" name="prenom" type="text" required />
+            </div>
+            <div>
+              <label for="nom">Nom *</label>
+              <input id="nom" name="nom" type="text" required />
+            </div>
+          </div>
+          <div class="field two">
+            <div>
+              <label for="email">E-mail *</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div>
+              <label for="tel">Téléphone</label>
+              <input id="tel" name="tel" type="tel" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="sujet">Votre demande</label>
+            <select id="sujet" name="sujet">
+              <option>Conseil &amp; choix des tissus</option>
+              <option>Rideaux &amp; voilages sur-mesure</option>
+              <option>Tringles &amp; pose</option>
+              <option>Mobilier &amp; réfection</option>
+              <option>Prise de mesures à domicile</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Votre projet *</label>
+            <textarea id="message" name="message" placeholder="Décrivez vos pièces, fenêtres, ambiances souhaitées…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer ma demande <span class="arrow">→</span></button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div class="brand">Casa Vogue</div>
+          <p>Maison de tissus & ameublement depuis 1987. Tissus, rideaux, tringles et mobilier, confectionnés et posés avec exigence.</p>
+        </div>
+        <div>
+          <h4>Collections</h4>
+          <ul>
+            <li><a href="collections.html#tissus">Tissus d'ameublement</a></li>
+            <li><a href="collections.html#rideaux">Rideaux &amp; voilages</a></li>
+            <li><a href="collections.html#tringles">Tringles &amp; accessoires</a></li>
+            <li><a href="collections.html#ameublement">Mobilier &amp; coussins</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Maison</h4>
+          <ul>
+            <li><a href="index.html#savoir-faire">Savoir-faire</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#realisations">Réalisations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Showroom</h4>
+          <ul>
+            <li>24 rue des Tisserands<br>75003 Paris</li>
+            <li><a href="tel:+33100000000">01 00 00 00 00</a></li>
+            <li><a href="mailto:bonjour@casavogue.fr">bonjour@casavogue.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Casa Vogue — Tous droits réservés.</span>
+        <span><a href="#">Mentions légales</a> · <a href="#">CGV</a> · <a href="#">Confidentialité</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
