@@ -3,7 +3,7 @@
   "use strict";
 
   var PRODUCTS = [
-    { name: "Séville",     cat: "tissus",   catLabel: "Tissu d'ameublement", matiere: "Velours de coton", price: "48", unit: "/ m", pal: "p-terracotta", weave: "w-velours", tag: "Nouveau" },
+    { name: "Régence",     cat: "tissus",   catLabel: "Tissu d'ameublement", matiere: "Velours marine",   price: "54", unit: "/ m", pal: "p-marine",     weave: "w-velours", tag: "Nouveau" },
     { name: "Lubéron",     cat: "tissus",   catLabel: "Tissu d'ameublement", matiere: "Lin lavé",          price: "39", unit: "/ m", pal: "p-lin",        weave: "w-lin",     tag: "" },
     { name: "Toscane",     cat: "tissus",   catLabel: "Tissu d'ameublement", matiere: "Coton damassé",     price: "54", unit: "/ m", pal: "p-ochre",      weave: "w-damas",   tag: "" },
     { name: "Bastide",     cat: "tissus",   catLabel: "Tissu d'ameublement", matiere: "Velours côtelé",    price: "46", unit: "/ m", pal: "p-olive",      weave: "w-velours", tag: "" },
@@ -13,7 +13,7 @@
     { name: "Zéphyr",      cat: "rideaux",  catLabel: "Voilage brodé",       matiere: "Étamine de coton",   price: "42", unit: "/ m",         pal: "p-sable",    weave: "w-pois",  tag: "" },
     { name: "Nocturne",    cat: "rideaux",  catLabel: "Rideau tamisant",     matiere: "Velours occultant",  price: "96", unit: "/ le rideau", pal: "p-prune",    weave: "w-velours", tag: "" },
 
-    { name: "Colonne Laiton", cat: "tringles", catLabel: "Tringle Ø28",      matiere: "Laiton brossé",      price: "79", unit: "/ 200 cm", pal: "p-ochre",   weave: "w-rayures", tag: "" },
+    { name: "Colonne Laiton", cat: "tringles", catLabel: "Tringle Ø28",      matiere: "Laiton brossé",      price: "79", unit: "/ 200 cm", pal: "p-dore",   weave: "w-rayures", tag: "" },
     { name: "Ligne Noire",    cat: "tringles", catLabel: "Tringle Ø20",      matiere: "Acier mat",          price: "59", unit: "/ 200 cm", pal: "p-bleunuit", weave: "w-rayures", tag: "" },
     { name: "Écru Bois",      cat: "tringles", catLabel: "Tringle bois Ø28", matiere: "Chêne huilé",        price: "68", unit: "/ 200 cm", pal: "p-taupe",   weave: "w-lin",     tag: "Nouveau" },
     { name: "Rail Discret",   cat: "tringles", catLabel: "Rail plafond",     matiere: "Aluminium blanc",    price: "44", unit: "/ 200 cm", pal: "p-ivoire",  weave: "w-rayures", tag: "" },

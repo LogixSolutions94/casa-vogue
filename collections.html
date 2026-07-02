@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collections — CASA VOGUE</title>
   <meta name="description" content="Le catalogue Casa Vogue : tissus d'ameublement, rideaux & voilages, tringles et accessoires, mobilier et coussins. Filtrez par univers." />
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/img/logo.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="assets/img/logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
@@ -20,7 +21,8 @@
   <header class="nav">
     <div class="wrap nav-inner">
       <a href="index.html" class="brand" aria-label="Casa Vogue, accueil">
-        <span class="mark">Casa</span><span class="mark">Vogue</span><span class="sub">Paris</span>
+        <span class="brand-mark"><img src="assets/img/logo.jpg" alt="" /></span>
+        <span class="brand-word"><span class="mark">Casa Vogue</span><span class="sub">Rideaux &amp; Tissus</span></span>
       </a>
       <nav class="nav-links" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
@@ -55,6 +57,14 @@
       </div>
     </section>
 
+    <section class="wrap" style="margin-bottom:clamp(3rem,6vw,5rem)">
+      <div class="gallery" style="grid-template-columns:repeat(3,1fr);grid-auto-rows:230px" data-reveal>
+        <figure><div class="swatch"><img src="assets/img/realisations/realisation-01.jpg" alt="Voilage plis vagues, chambre" loading="lazy" /></div><figcaption>Voilage plis vagues</figcaption></figure>
+        <figure><div class="swatch"><img src="assets/img/realisations/realisation-04.jpg" alt="Rideau tamisant et voilage, chambre lumineuse" loading="lazy" /></div><figcaption>Rideau tamisant</figcaption></figure>
+        <figure><div class="swatch"><img src="assets/img/realisations/realisation-02.jpg" alt="Salon habillé, ensemble complet" loading="lazy" /></div><figcaption>Ensemble salon</figcaption></figure>
+      </div>
+    </section>
+
     <section class="section" style="padding-top:0">
       <div class="wrap">
         <div class="filterbar" data-filter data-reveal>
@@ -81,8 +91,11 @@
     <div class="wrap">
       <div class="footer-top">
         <div>
-          <div class="brand">Casa Vogue</div>
-          <p>Maison de tissus & ameublement depuis 1987. Tissus, rideaux, tringles et mobilier, confectionnés et posés avec exigence.</p>
+          <a href="index.html" class="brand">
+            <span class="brand-mark"><img src="assets/img/logo.jpg" alt="" /></span>
+            <span class="brand-word"><span class="mark">Casa Vogue</span><span class="sub">Rideaux &amp; Tissus</span></span>
+          </a>
+          <p>Maison de rideaux &amp; tissus depuis 1987. Tissus, rideaux, tringles et mobilier, confectionnés et posés avec exigence.</p>
         </div>
         <div>
           <h4>Collections</h4>

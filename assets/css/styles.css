@@ -1,30 +1,31 @@
 /* =====================================================================
-   CASA VOGUE — Maison de tissus & ameublement
-   Design system : ivoire chaud · encre espresso · terracotta · olive
-   Typographie : Fraunces (display) + Jost (texte)
+   CASA VOGUE — Rideaux & Tissus
+   Design system : ivoire chaud · marine profond · or · esprit "rideau de scène"
+   Typographie : Cinzel (capitales) + Cormorant Garamond (display) + Jost (texte)
    ===================================================================== */
 
 /* ------------------------------ Tokens ------------------------------ */
 :root {
   /* Palette */
-  --paper:        #f4ece0;
-  --paper-2:      #ecdfcd;
-  --cream:        #fbf6ee;
-  --ink:          #241d17;
-  --ink-soft:     #5c5147;
-  --ink-faint:    #8a7d70;
-  --terracotta:   #b56a45;
-  --terracotta-d: #96522f;
-  --olive:        #6d7355;
-  --bordeaux:     #7c3b40;
-  --gold:         #a9803f;
-  --line:         rgba(36, 29, 23, .14);
-  --line-strong:  rgba(36, 29, 23, .28);
-  --shadow:       0 24px 60px -30px rgba(36, 29, 23, .45);
-  --shadow-sm:    0 12px 30px -18px rgba(36, 29, 23, .4);
+  --paper:        #f6efe1;
+  --paper-2:      #ebdec1;
+  --cream:        #fffbf2;
+  --ink:          #13223b;
+  --ink-soft:     #4c5972;
+  --ink-faint:    #808ba3;
+  --terracotta:   #c9a23f;   /* or — accents, liens, boutons */
+  --terracotta-d: #a37f26;   /* or profond — hover */
+  --olive:        #16294a;   /* marine secondaire */
+  --bordeaux:     #0f1d33;   /* marine profond — badges, avatars */
+  --gold:         #d4b45a;   /* or clair — étoiles, filets */
+  --line:         rgba(19, 34, 59, .14);
+  --line-strong:  rgba(19, 34, 59, .28);
+  --shadow:       0 24px 60px -30px rgba(11, 20, 36, .5);
+  --shadow-sm:    0 12px 30px -18px rgba(11, 20, 36, .42);
 
   /* Type */
-  --display: "Fraunces", "Playfair Display", Georgia, serif;
+  --display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --caps:    "Cinzel", "Cormorant Garamond", Georgia, serif;
   --body:    "Jost", "Century Gothic", sans-serif;
 
   /* Rhythm */
@@ -68,7 +69,7 @@ body::before {
 /* --------------------------- Typography ----------------------------- */
 h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.04; letter-spacing: -.01em; }
 .eyebrow {
-  font-family: var(--body);
+  font-family: var(--caps);
   font-size: .72rem;
   letter-spacing: .34em;
   text-transform: uppercase;
@@ -135,11 +136,23 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
   border-bottom: 1px solid transparent;
   transition: border-color .4s, background .4s, box-shadow .4s;
 }
-.nav.scrolled { border-color: var(--line); box-shadow: 0 10px 30px -24px rgba(36,29,23,.5); }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; }
-.brand { display: flex; align-items: baseline; gap: .5rem; font-family: var(--display); font-size: 1.5rem; letter-spacing: .02em; }
-.brand .mark { font-weight: 600; }
-.brand .sub { font-family: var(--body); font-size: .58rem; letter-spacing: .42em; text-transform: uppercase; color: var(--terracotta-d); align-self: center; }
+.nav.scrolled { border-color: var(--line); box-shadow: 0 10px 30px -24px rgba(11,20,36,.5); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 84px; }
+.brand { display: flex; align-items: center; gap: .8rem; }
+.brand-mark {
+  flex: none; width: 46px; height: 46px; border-radius: 50%; overflow: hidden;
+  position: relative; box-shadow: 0 0 0 1px var(--line-strong), var(--shadow-sm);
+  transition: transform .5s var(--ease);
+}
+.brand:hover .brand-mark { transform: rotate(8deg) scale(1.04); }
+.brand-mark img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.14); display: block; }
+.brand-word { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-word .mark {
+  font-family: var(--caps); font-size: 1.28rem; font-weight: 500; letter-spacing: .06em;
+  color: var(--ink);
+}
+.brand-word .sub { font-family: var(--body); font-size: .56rem; letter-spacing: .42em; text-transform: uppercase; color: var(--terracotta-d); margin-top: .3rem; }
+.footer .brand-word .mark { color: var(--paper); }
 .nav-links { display: flex; align-items: center; gap: 2.1rem; }
 .nav-links a {
   font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft);
@@ -181,14 +194,14 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
 .hero-collage .t3 { width: 40%; aspect-ratio: 4/3; left: 8%; bottom: 0; z-index: 4; }
 .hero-collage .badge {
   position: absolute; right: 2%; bottom: 6%; z-index: 5;
-  width: 122px; height: 122px; border-radius: 50%;
-  background: var(--bordeaux); color: var(--cream);
+  width: 132px; height: 132px; border-radius: 50%;
+  background: var(--bordeaux); color: var(--cream); overflow: hidden;
   display: grid; place-items: center; text-align: center;
   font-family: var(--display); line-height: 1.1; box-shadow: var(--shadow);
-  animation: spin-slow 26s linear infinite;
+  animation: spin-slow 30s linear infinite;
+  border: 3px solid var(--cream);
 }
-.hero-collage .badge span { font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; font-family: var(--body); display: block; }
-.hero-collage .badge b { font-size: 1.35rem; display: block; }
+.hero-collage .badge img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .hero-collage .badge { animation: none; } }
 
@@ -204,6 +217,8 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
 /* --------------------------- Swatch art ----------------------------- */
 /* Base fabric swatch; palette + weave set by modifier classes */
 .swatch { position: relative; width: 100%; height: 100%; background-color: var(--sw, #cbb69b); overflow: hidden; }
+/* Real photography filling a swatch container (véritables réalisations) */
+.swatch > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .swatch::after { /* soft light + weave sheen */
   content: ""; position: absolute; inset: 0;
   background:
@@ -247,6 +262,8 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
 .p-rouille    { --sw: #a4522f; }
 .p-vertdeau   { --sw: #7fa39a; }
 .p-prune      { --sw: #5f4457; }
+.p-marine     { --sw: #12233f; }
+.p-dore       { --sw: #c9a23f; }
 
 /* --------------------------- Collections ---------------------------- */
 .collections-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -258,7 +275,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
 .collection-card:hover .swatch { transform: scale(1.06); }
 .collection-card .overlay {
   position: absolute; inset: 0; z-index: 2;
-  background: linear-gradient(to top, rgba(20,15,11,.72) 8%, rgba(20,15,11,.06) 55%, transparent);
+  background: linear-gradient(to top, rgba(9,16,28,.74) 8%, rgba(9,16,28,.08) 55%, transparent);
   display: flex; flex-direction: column; justify-content: flex-end; padding: 1.6rem;
   color: var(--cream);
 }
@@ -332,7 +349,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
 }
 .service::before {
   content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 3px;
-  background: linear-gradient(90deg, var(--terracotta), var(--gold)); transform: scaleX(0); transform-origin: left; transition: transform .5s var(--ease);
+  background: linear-gradient(90deg, var(--olive), var(--terracotta), var(--gold)); transform: scaleX(0); transform-origin: left; transition: transform .5s var(--ease);
 }
 .service:hover { transform: translateY(-6px); }
 .service:hover::before { transform: scaleX(1); }
@@ -348,13 +365,28 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
 .gallery figure:hover .swatch { transform: scale(1.08); }
 .gallery figcaption {
   position: absolute; left: 0; bottom: 0; right: 0; padding: 1rem;
-  background: linear-gradient(to top, rgba(20,15,11,.66), transparent);
+  background: linear-gradient(to top, rgba(9,16,28,.68), transparent);
   color: var(--cream); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase;
   transform: translateY(6px); opacity: 0; transition: all .4s var(--ease);
 }
 .gallery figure:hover figcaption { transform: translateY(0); opacity: 1; }
 .g-wide { grid-column: span 2; }
 .g-tall { grid-row: span 2; }
+
+/* ----------------------------- Vidéos -------------------------------- */
+.video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 3rem; }
+.video-card {
+  position: relative; border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-sm); background: var(--bordeaux); aspect-ratio: 9/16;
+  border: 1px solid var(--line);
+}
+.video-card video { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--bordeaux); }
+.video-card .vlabel {
+  position: absolute; left: 0; right: 0; top: 0; z-index: 2; padding: .8rem .9rem;
+  font-family: var(--caps); font-size: .64rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--cream); background: linear-gradient(to bottom, rgba(9,16,28,.75), transparent);
+  pointer-events: none;
+}
 
 /* --------------------------- Testimonials --------------------------- */
 .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
@@ -374,8 +406,8 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
 .cta-band::before {
   content: ""; position: absolute; inset: 0; opacity: .5;
   background:
-    radial-gradient(50% 60% at 85% 20%, rgba(181,106,69,.5), transparent 60%),
-    radial-gradient(45% 55% at 12% 90%, rgba(109,115,85,.45), transparent 60%);
+    radial-gradient(50% 60% at 85% 20%, rgba(201,162,63,.35), transparent 60%),
+    radial-gradient(45% 55% at 12% 90%, rgba(22,41,74,.6), transparent 60%);
 }
 .cta-inner { position: relative; display: grid; grid-template-columns: 1.2fr .8fr; gap: 3rem; align-items: center; }
 .cta-inner h2 { font-size: clamp(2rem, 5vw, 3.4rem); }
@@ -392,9 +424,11 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
 .cta-msg { margin-top: .8rem; font-size: .82rem; color: var(--terracotta); min-height: 1.2em; }
 
 /* ------------------------------ Footer ------------------------------ */
-.footer { background: #1c1610; color: color-mix(in srgb, var(--paper) 72%, transparent); padding-top: clamp(3.5rem, 7vw, 5.5rem); }
+.footer { background: #0a1425; color: color-mix(in srgb, var(--paper) 72%, transparent); padding-top: clamp(3.5rem, 7vw, 5.5rem); }
 .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 2.5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.1); }
-.footer .brand { color: var(--paper); font-size: 1.7rem; margin-bottom: 1rem; }
+.footer .brand { margin-bottom: 1.1rem; }
+.footer .brand-mark { width: 58px; height: 58px; box-shadow: 0 0 0 1px rgba(255,255,255,.18), var(--shadow-sm); }
+.footer .brand-word .mark { font-size: 1.55rem; }
 .footer p { font-size: .92rem; max-width: 34ch; }
 .footer h4 { font-family: var(--body); font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; color: var(--paper); margin-bottom: 1.1rem; font-weight: 500; }
 .footer ul { display: grid; gap: .65rem; }
@@ -459,11 +493,11 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
 }
 .mobile-menu.open { transform: none; }
 .mobile-menu a { font-family: var(--display); font-size: 2rem; padding: .7rem 0; border-bottom: 1px solid var(--line); }
-.mobile-menu .btn { margin-top: 1.6rem; justify-content: center; }
+.mobile-menu .btn { margin-top: 1.6rem; justify-content: center; font-size: .74rem; letter-spacing: .1em; white-space: nowrap; }
 
 /* ------------------------------ Responsive -------------------------- */
 @media (max-width: 1024px) {
-  .product-grid, .services-grid, .gallery { grid-template-columns: repeat(3, 1fr); }
+  .product-grid, .services-grid, .gallery, .video-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 860px) {
@@ -477,6 +511,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
   .collection-card.tall { grid-row: span 1; aspect-ratio: 4/5; }
   .product-grid, .services-grid, .gallery { grid-template-columns: repeat(2, 1fr); }
   .gallery { grid-auto-rows: 160px; }
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {
   .collections-grid, .testi-grid, .product-grid, .services-grid { grid-template-columns: 1fr; }
@@ -485,4 +520,5 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.0
   .g-wide, .g-tall { grid-column: auto; grid-row: auto; }
   .newsletter { flex-direction: column; }
   .newsletter .btn-primary { justify-content: center; }
+  .video-grid { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
 }
